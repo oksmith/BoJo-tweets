@@ -47,8 +47,8 @@ class StreamingCorpus(object):
         wnl = nltk.stem.wordnet.WordNetLemmatizer()
         for file_loc in self.files:
             with open(file_loc, 'r') as f:
-                lines = [line for line in f.read().split('\n') if len(line) > 0]
-                document = ' '.join([json.loads(x)['content'] for x in lines])
+                lines = [json.loads(line) for line in f.read().split('\n') if len(line) > 0]
+                document = ' '.join([x['content'] for x in lines if x['lang'] == 'en'])
                 if self.phraser:
                     norm_document = self.phraser[normalize_document(document, tokenizer=wtk, lemmatizer=wnl)]
                 else:
@@ -79,8 +79,8 @@ class BagOfWordsStreamingCorpus(object):
         
         for file_loc in self.files:
             with open(file_loc, 'r') as f:
-                lines = [line for line in f.read().split('\n') if len(line) > 0]
-                document = ' '.join([json.loads(x)['content'] for x in lines])
+                lines = [json.loads(line) for line in f.read().split('\n') if len(line) > 0]
+                document = ' '.join([x['content'] for x in lines if x['lang'] == 'en'])
                 if self.phraser:
                     norm_document = self.phraser[normalize_document(document, tokenizer=wtk, lemmatizer=wnl)]
                 else:
