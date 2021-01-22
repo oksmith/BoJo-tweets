@@ -50,10 +50,6 @@ unsupervised machine learning methods.
 The optimal number of topics in this dataset was chosen to be 11, according to the coherence score. Below is an 
 intertopic map, which can be used to visualise the word embedding overlap between these topics.
 
-<p align="right">
-  <img src="https://github.com/oksmith/BoJo-tweets/blob/main/images/LDAvis_plot.png" />
-</p>
-
 ![Intertopic distance map](images/LDAvis_plot.png)
 
 Visually inspecting the keywords for these topics (listed explicitly in Notebook 3), there are mostly clear human
