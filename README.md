@@ -48,12 +48,12 @@ unsupervised machine learning methods.
 
 ### Topics
 The optimal number of topics in this dataset was chosen to be 11, according to the coherence score. Below is an 
-intertopic map, which can be used to visualise the word embedding overlap between these topics.
+intertopic map, which can be used to visualise the word embedding overlap between these themes.
 
 ![Intertopic distance map](images/LDAvis_plot.png)
 
-Visually inspecting the keywords for these topics (listed explicitly in Notebook 3), there are mostly clear human
-interpretations arising:
+Visually inspecting the keywords for each topic (listed explicitly in Notebook 3), most of them have clear human
+interpretations:
 1. Coronavirus testing / Science
 2. International and Domestic policies
 3. Brexit
@@ -67,28 +67,28 @@ interpretations arising:
 11. Black Lives Matter protests
 
 
-The plot below shows how these topics evolve over time, by plotting the most dominant topic's contribution each day:
+The plot below shows how the conversation changes over time, by plotting the most dominant topic's contribution each day:
 ![Dominant topics over time](images/Dominant_topics_over_time.png)
 
 Some interesting things showed up, like the fact "statue" is one of the highest-scoring keywords in the BLM topic #11.
 People who were tweeting about these protests were also tweeting a lot about statues. [I wonder why.](https://en.wikipedia.org/wiki/Statue_of_Edward_Colston#Toppling_and_removal)
 
 Also, the most focused topic award goes to Dominic Cummings, it definitely contains the least spillover into other 
-topics. The top 10 key words are all directly related to his drive to Durham. The top keywords are:
+groups. The top 10 key words are all directly related to his drive to Durham. The top keywords are:
 `cummings, dominic_cummings, sack, dominiccummings, lockdown, parent, drive, dom, mile, durham`.
 
-There are two topics which are election-related. One of them captures the Twitter hashtag 
+There are two election-related themes. One of them captures the Twitter hashtag 
 _#BackBoris_ and contains other positive keywords such as `congratulation, unite, mandate, nh_billion, backboris, congrats, victory` 
 where `nh_billion` is a processed version of phrases to do with funding the NHS. This topic is more dominant in the 
 build-up to the Tory leadership election.
 
 The other election-related topic captures the _#LiarJohnson_ hashtag as well as keywords such as `ge2019, hospital, nurse, scrutiny, coward, liarjohnson, marr, poverty` 
 and here `marr` refers to Boris' [appearance](https://www.bbc.co.uk/news/av/uk-politics-21916721) on the Andrew Marr show.
-This topic is more dominant around the general election in 2019.
+This theme is more dominant around the general election in 2019.
 
 Despite some of the topics having obvious human interpretations, others are less clear-cut. For example, there are two or
-three topics with keywords surrounding "coronavirus", but each time there are different secondary keywords which indicate 
-where the coronavirus conversation has changed over time. In the early stages of the lockdown, everyone was talking about 
+three with keywords regarding "coronavirus", but each time there are different secondary keywords which indicate 
+how the coronavirus conversation has changed over time. In the early stages of the lockdown, everyone was talking about 
 "essential travel", "staying home" and "Italy", whereas in the later stages of 2020 the conversation shifted more to be 
 about "masks", "pubs" (classic UK) and "teachers".
 
@@ -116,11 +116,11 @@ If you are interested, I kept the model comparison table inside notebook 4.
 
 ### Sentiment scores
 
-Using the model above, every tweet in our dataset was given a score between -1 (negative sentiment) and +1 (positive 
+Using the model above, every tweet in the dataset was given a score between -1 (negative sentiment) and +1 (positive 
 sentiment). For visualisation purposes, I created daily summary information such as the mean sentiment of 
 tweets in a single day, the distribution of sentiment in a single day, the 100 most positive/negative tweets in a day etc.
 
-On average, the sentiment of tweets which mention Boris Johnson are __negative__ (mean score of -0.22).
+On average, the emotion of tweets which mention Boris Johnson are __negative__ (mean score of -0.22).
 ![Mean sentiment](images/mean_sentiment_over_time.png)
 
 One interesting thing we can do is take a look at the daily sentiment at the start of the lockdown, and see what happens.
