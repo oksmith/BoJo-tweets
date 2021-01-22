@@ -161,9 +161,11 @@ of interesting ones.
 
 Here is 2019 Q4 (note the themes about brexit, the upcoming general election, and the fact people say "blah blah" a lot 
 on the negative cloud).
+
 ![Sentiment WordCloud 2019 Q4](images/Positive_Negative_sentiment_WordCloud_2019Q4.png)
 
 Here is the 2020 Q1 word cloud - the themes have changed slightly:
+
 ![Sentiment WordCloud 2019 Q4](images/Positive_Negative_sentiment_WordCloud_2020Q1.png)
 
 ## Future analysis
