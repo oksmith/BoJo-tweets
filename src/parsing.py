@@ -8,7 +8,7 @@ import csv
 
 import pandas as pd
 
-from utils import get_date_from_file_loc
+from src.utils import get_date_from_file_loc
 
 
 EXPECTED_COLUMNS = ['date', 'tweet_id', 'tweet_datetime', 'content', 'url', 'user',
@@ -81,3 +81,8 @@ def parse_list_of_files(file_list, output_csv_loc):
     
     df.to_csv(output_csv_loc, quoting=csv.QUOTE_NONNUMERIC)
     print('Done!')
+    
+    
+def read_json_as_dataframe(json_file_loc):
+    tweets = read_json_tweets(json_file_loc)
+    return parse_json_tweets(tweets, date=get_date_from_file_loc(json_file_loc))

@@ -3,7 +3,7 @@ import os
 import nltk
 import re 
 
-from utils import get_date_from_file_loc
+from src.utils import get_date_from_file_loc
 
 TWEETS_DATA_DIR = 'tweets_data'
 
@@ -14,7 +14,7 @@ EXTRA_STOP_WORDS = ['bori', 'boris', 'johnson']  # we don't want the topic to be
 
 def remove_special_parts(tweet_txt):
     return ' '.join(
-        re.sub("(@[A-Za-z0-9_]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet_txt.replace('&amp;', ' '))\
+        re.sub("(@[A-Za-z0-9_]+)|([^0-9A-Za-z' \t])|(\w+:\/\/\S+)", " ", tweet_txt.replace('&amp;', ' '))\
             .split()
     )
 
