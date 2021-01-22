@@ -50,7 +50,7 @@ unsupervised machine learning methods.
 The optimal number of topics in this dataset was chosen to be 11, according to the coherence score. Below is an 
 intertopic map, which can be used to visualise the word embedding overlap between these topics.
 
-<p align="center">
+<p align="right">
   <img src="https://github.com/oksmith/BoJo-tweets/blob/main/images/LDAvis_plot.png" />
 </p>
 
@@ -152,8 +152,6 @@ The same goes for negative tweets, with negative scores (-0.9, -0.7, 0).
 <p align="center">
   <img src="https://github.com/oksmith/BoJo-tweets/blob/main/images/sentiment_categories.png" />
 </p>
-
-![Sentiment intensity](images/sentiment_categories.png)
 
 Notice how the "very negative" tweets are much more common (around 25% of all tweets) than the "very positive" tweets, 
 which only account for around 15% of all tweets.
